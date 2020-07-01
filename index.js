@@ -147,7 +147,7 @@ function timer() {
   currentPlayer();
   var element = document.getElementById("innerprogress");
   var width = 1;
-  timerid = setInterval(frame, 100);
+  timerid = setInterval(frame, 1000);
   function frame() {
     if (width >= 100) {
       currentPlayer();
