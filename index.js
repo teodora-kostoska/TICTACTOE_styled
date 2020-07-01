@@ -150,8 +150,8 @@ function timer() {
   timerid = setInterval(frame, 999);
   function frame() {
     if (width >= 100) {
-      clearInterval(id);
       currentPlayer();
+      clearInterval(id);
     } else {
       width = width + 10;
       element.style.width = width + "%";
