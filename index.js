@@ -121,11 +121,11 @@ function winner() {
 
 function play(clicked_id) {
   clearInterval(timerid);
+  timer();
   id = clicked_id;
   if (id !== null) {
     if (gameBoard[id] === null) {
       let cell = document.getElementById(id);
-      timer();
       gameBoard[id] = player;
       cell.innerHTML = nowPlaying;
       if (player === 1) {
@@ -146,12 +146,12 @@ function play(clicked_id) {
 function timer() {
   currentPlayer();
   var element = document.getElementById("innerprogress");
-  var width = 0;
+  var width = 1;
   timerid = setInterval(frame, 1000);
   function frame() {
     if (width >= 100) {
-      currentPlayer();
       clearInterval(id);
+      currentPlayer();
     } else {
       width = width + 10;
       element.style.width = width + "%";
