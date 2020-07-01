@@ -146,14 +146,14 @@ function play(clicked_id) {
 function timer() {
   currentPlayer();
   var element = document.getElementById("innerprogress");
-  var width = 1;
+  var width = 0;
   timerid = setInterval(frame, 1000);
   function frame() {
     if (width >= 100) {
       currentPlayer();
       clearInterval(id);
     } else {
-      width++;
+      width = width + 10;
       element.style.width = width + "%";
     }
   }
